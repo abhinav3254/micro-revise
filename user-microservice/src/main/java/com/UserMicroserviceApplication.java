@@ -3,6 +3,7 @@ package com;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class UserMicroserviceApplication {
@@ -11,5 +12,10 @@ public class UserMicroserviceApplication {
 		SpringApplication.run(UserMicroserviceApplication.class, args);
 	}
 	
+	
+	@Bean
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
 
 }
